@@ -1,3 +1,4 @@
+
 function scanHMI() {
-  alert("HMI Scan Feature - Coming Soon");
+    alert("Plasmax AI\n\nScan Feature Coming Soon");
 }
