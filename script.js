@@ -5,3 +5,12 @@ function scanHMI() {
     alert("Image Selected Successfully");
 });
 }
+const imageInput = document.getElementById("imageInput");
+
+imageInput.addEventListener("change", function () {
+    const file = imageInput.files[0];
+
+    if (file) {
+        alert("Image Selected: " + file.name);
+    }
+});
