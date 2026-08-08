@@ -1,0 +1,17 @@
+body{
+  background:#0B1F3A;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+}
+
+button{
+  width:280px;
+  height:55px;
+  margin:10px;
+  border:none;
+  border-radius:12px;
+  background:#00AEEF;
+  color:white;
+  font-size:18px;
+}
