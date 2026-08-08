@@ -46,3 +46,12 @@ function searchFault() {
 function openManual() {
     alert("Plasmax Manual will be available here.");
 }
+function askAI() {
+    let question = document.getElementById("question").value.toUpperCase();
+
+    if (question === "W0503") {
+        alert("Fault: Cooling Coating Module\n\nCause: Cooling system problem\n\nSolution: Check water flow, pump and temperature.");
+    } else {
+        alert("Sorry! This fault is not in the database yet.");
+    }
+}
