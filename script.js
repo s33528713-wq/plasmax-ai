@@ -14,7 +14,19 @@ imageInput.addEventListener("change", function () {
         alert("Image Selected: " + file.name);
     }
 });
-function searchFault() {
+functfunction searchFault() {
+    const code = document.getElementById("faultCode").value.toUpperCase();
+
+    if (faults[code]) {
+        alert(
+            "Fault: " + faults[code].title +
+            "\n\nCause: " + faults[code].cause +
+            "\n\nSolution: " + faults[code].solution
+        );
+    } else {
+        alert("Fault not found.");
+    }
+}
     let code = document.getElementById("faultCode").value;
 
     if (code == "W0503") {
