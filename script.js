@@ -43,3 +43,6 @@ function searchFault() {
     alert("Fault not found!");
   }
 }
+function openManual() {
+    alert("Plasmax Manual will be available here.");
+}
