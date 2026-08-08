@@ -23,3 +23,23 @@ function searchFault() {
         alert("Fault not found");
     }
 }
+
+const faults = {
+  "W0503": {
+    name: "Cooling Coating Module Fault",
+    solution: "Check cooling water flow, pump and temperature."
+  }
+};
+
+function searchFault() {
+  const code = document.getElementById("faultCode").value.toUpperCase();
+
+  if (faults[code]) {
+    alert(
+      "Fault: " + faults[code].name +
+      "\n\nSolution: " + faults[code].solution
+    );
+  } else {
+    alert("Fault not found!");
+  }
+}
