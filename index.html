@@ -1,43 +1,52 @@
+
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="style.css">
-  <title>Plasmax AI</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasmax AI</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Plasmax AI</h1>
 
-  <button onclick="scanHMI()">📷 Scan HMI</button>
-  <br><br>
+    <h1>🏭 Plasmax AI</h1>
 
-<input type="text" id="faultCode" placeholder="Enter Fault Code">
+    <button onclick="scanHMI()">📷 Scan HMI</button>
 
-<button onclick="searchFault()">Search Fault</button>
-  <br><br>
-<br><br>
+    <br><br>
 
-<input type="text" id="faultCode" placeholder="Enter Fault Code">
+    <input type="file" id="imageInput" accept="image/*">
 
-<button onclick="searchFault()">Search Fault</button>
-<input type="text" id="faultCode" placeholder="Enter Fault Code">
+    <br><br>
 
-<button onclick="searchFault()">Search Fault</button>
-  <input type="file" id="imageInput" accept="image/*">
-  <br><br>
+    <input type="text" id="faultCode" placeholder="Enter Fault Code">
 
-  <button>⚠️ Fault Search</button>
-  <input type="text" id="faultCode" placeholder="Enter Fault Code">
+    <button onclick="searchFault()">🔍 Search Fault</button>
 
-<button onclick="searchFault()">Search</button>
-  <br><br>
+    <br><br>
 
-  <button onclick="location.href='manual.html'">📖 Manual</button>
-  <br><br>
+    <button onclick="location.href='manual.html'">📖 Manual</button>
 
-  <button onclick="location.href='ai.html'">🤖 AI Assistant</button>
-  <button onclick="location.href='machine.html'">🏭 Select Machine</button>
-  <button onclick="location.href='history.html'">📊 History</button>
+    <br><br>
 
-<button onclick="location.href='settings.html'">⚙️ Settings</button>
+    <button onclick="location.href='ai.html'">🤖 AI Assistant</button>
+
+    <br><br>
+
+    <button onclick="location.href='machine.html'">🏭 Select Machine</button>
+
+    <br><br>
+
+    <button onclick="location.href='history.html'">📊 History</button>
+
+    <br><br>
+
+    <button onclick="location.href='settings.html'">⚙️ Settings</button>
+
+    <script src="faults.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
