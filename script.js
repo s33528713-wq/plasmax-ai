@@ -1,11 +1,8 @@
 
 function scanHMI() {
     const imageInput = document.getElementById("imageInput");
-
     if (imageInput) {
         imageInput.click();
-    } else {
-        alert("Image input not found.");
     }
 }
 
@@ -14,7 +11,6 @@ const imageInput = document.getElementById("imageInput");
 if (imageInput) {
     imageInput.addEventListener("change", function () {
         const file = imageInput.files[0];
-
         if (file) {
             alert("Image Selected: " + file.name);
         }
@@ -22,66 +18,37 @@ if (imageInput) {
 }
 
 function searchFault() {
-    const input = document.getElementById("faultCode");
+    const code = document.getElementById("faultCode").value.trim().toUpperCase();
 
-    if (!input) {
-        alert("Fault input not found.");
-        return;
-    }
-
-    const code = input.value.trim().toUpperCase();
+    const result = document.getElementById("result");
+    const title = document.getElementById("faultTitle");
+    const cause = document.getElementById("faultCause");
+    const solution = document.getElementById("faultSolution");
 
     if (faults[code]) {
-        alert(
-            "Fault: " + faults[code].title +
-            "\n\nCause: " + faults[code].cause +
-            "\n\nSolution: " + faults[code].solution
-        );
+        result.style.display = "block";
+        title.innerText = faults[code].title;
+        cause.innerText = faults[code].cause;
+        solution.innerText = faults[code].solution;
     } else {
-        alert("Fault not found.");
+        result.style.display = "block";
+        title.innerText = "❌ Fault Not Found";
+        cause.innerText = "No information available.";
+        solution.innerText = "Check the fault code or update the database.";
     }
-}
-
-function openManual() {
-    window.location.href = "manual.html";
 }
 
 function askAI() {
-    const question = document.getElementById("question");
+    const question = document.getElementById("question").value.trim().toUpperCase();
 
-    if (!question) {
-        alert("Question box not found.");
-        return;
-    }
-
-    const code = question.value.trim().toUpperCase();
-
-    if (faults[code]) {
+    if (faults[question]) {
         alert(
-            "AI Diagnosis\n\n" +
-            "Fault: " + faults[code].title +
-            "\n\nCause: " + faults[code].cause +
-            "\n\nSolution: " + faults[code].solution
+            "🤖 Plasmax AI\n\n" +
+            "Fault: " + faults[question].title +
+            "\n\nCause: " + faults[question].cause +
+            "\n\nSolution: " + faults[question].solution
         );
     } else {
-        alert("Sorry! This fault is not in the database yet.");
+        alert("Sorry! This fault is not available in the database.");
     }
-}
-,
-"GAS_VALVE_V19XX": {
-    title: "Gas Valve V19XX Fault",
-    cause: "Valve does not switch or delayed",
-    solution: "Check signal wire, pneumatic O-ring, grease, spring, reed switch, wiring and cable."
-},
-
-"REACTOR_NOT_CLOSED": {
-    title: "Reactor Not Closed",
-    cause: "Bottle fallen in station",
-    solution: "Check bottle transfer, turning wheel gripper, gas lance, director guides and reactor block roller."
-},
-
-"MAIN_AIR_SUPPLY": {
-    title: "Main Air Supply Fault",
-    cause: "Air pressure below 5 bar",
-    solution: "Check air pressure, FRL filter, regulator, air leakage and digital pressure gauge."
 }
