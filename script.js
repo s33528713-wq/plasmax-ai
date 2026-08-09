@@ -67,3 +67,21 @@ function askAI() {
         alert("Sorry! This fault is not in the database yet.");
     }
 }
+,
+"GAS_VALVE_V19XX": {
+    title: "Gas Valve V19XX Fault",
+    cause: "Valve does not switch or delayed",
+    solution: "Check signal wire, pneumatic O-ring, grease, spring, reed switch, wiring and cable."
+},
+
+"REACTOR_NOT_CLOSED": {
+    title: "Reactor Not Closed",
+    cause: "Bottle fallen in station",
+    solution: "Check bottle transfer, turning wheel gripper, gas lance, director guides and reactor block roller."
+},
+
+"MAIN_AIR_SUPPLY": {
+    title: "Main Air Supply Fault",
+    cause: "Air pressure below 5 bar",
+    solution: "Check air pressure, FRL filter, regulator, air leakage and digital pressure gauge."
+}
