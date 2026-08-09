@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,47 +10,65 @@
 
 <body>
 
+<div class="card">
+
     <h1>🏭 Plasmax AI</h1>
 
-    <button onclick="scanHMI()">📷 Scan HMI</button>
-
-    <br><br>
+    <p>Industrial Troubleshooting Assistant</p>
 
     <input type="file" id="imageInput" accept="image/*">
 
     <br><br>
 
-    <input type="text" id="faultCode" placeholder="Enter Fault Code">
+    <button onclick="scanHMI()">📷 Scan HMI</button>
+
+    <br><br>
+
+    <input
+        type="text"
+        id="faultCode"
+        placeholder="Enter Fault Code (Example: P1_OUTSIDE)">
+
+    <br><br>
 
     <button onclick="searchFault()">🔍 Search Fault</button>
-    
-<div id="result" class="card" style="display:none;">
-    <h2 id="faultTitle"></h2>
-    <p><strong>Cause:</strong> <span id="faultCause"></span></p>
-    <p><strong>Solution:</strong> <span id="faultSolution"></span></p>
-</div>
+
     <br><br>
+
+    <div id="result" class="card" style="display:none; text-align:left;">
+
+        <h2 id="faultTitle"></h2>
+
+        <hr>
+
+        <p>
+            <strong>Cause</strong><br>
+            <span id="faultCause"></span>
+        </p>
+
+        <p>
+            <strong>Solution</strong><br>
+            <span id="faultSolution"></span>
+        </p>
+
+    </div>
+
+    <br>
 
     <button onclick="location.href='manual.html'">📖 Manual</button>
 
-    <br><br>
-
     <button onclick="location.href='ai.html'">🤖 AI Assistant</button>
-
-    <br><br>
 
     <button onclick="location.href='machine.html'">🏭 Select Machine</button>
 
-    <br><br>
-
     <button onclick="location.href='history.html'">📊 History</button>
-
-    <br><br>
 
     <button onclick="location.href='settings.html'">⚙️ Settings</button>
 
-    <script src="faults.js"></script>
-    <script src="script.js"></script>
+</div>
+
+<script src="faults.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
