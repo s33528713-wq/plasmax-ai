@@ -30,12 +30,14 @@ function searchFault() {
         title.innerText = faults[code].title;
         cause.innerText = faults[code].cause;
         solution.innerText = faults[code].solution;
+        localStorage.setItem("lastFault", code);
+        localStorage.setItem("lastFault", code);
     } else {
         result.style.display = "block";
         title.innerText = "❌ Fault Not Found";
         cause.innerText = "No information available.";
         solution.innerText = "Check the fault code or update the database.";
-        localStorage.setItem("lastFault", code);
+        
     }
 }
 
