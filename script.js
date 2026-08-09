@@ -35,6 +35,7 @@ function searchFault() {
         title.innerText = "❌ Fault Not Found";
         cause.innerText = "No information available.";
         solution.innerText = "Check the fault code or update the database.";
+        localStorage.setItem("lastFault", code);
     }
 }
 
