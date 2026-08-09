@@ -24,7 +24,12 @@
     <input type="text" id="faultCode" placeholder="Enter Fault Code">
 
     <button onclick="searchFault()">🔍 Search Fault</button>
-
+    
+<div id="result" class="card" style="display:none;">
+    <h2 id="faultTitle"></h2>
+    <p><strong>Cause:</strong> <span id="faultCause"></span></p>
+    <p><strong>Solution:</strong> <span id="faultSolution"></span></p>
+</div>
     <br><br>
 
     <button onclick="location.href='manual.html'">📖 Manual</button>
