@@ -20,7 +20,7 @@
 
 <br><br>
 
-<button onclick="alert('App Version: Plasmax AI V2.0')">ℹ️ About App</button>
+<button onclick="aboutApp()">ℹ️ About App</button>
 
 <br><br>
 
@@ -33,6 +33,16 @@ const machine = localStorage.getItem("machine");
 if (machine) {
     document.getElementById("selectedMachine").innerText =
         "Selected Machine: " + machine;
+}
+</script>
+    <script>
+function aboutApp() {
+    alert(
+        "Plasmax AI\n\n" +
+        "Version: 3.0\n\n" +
+        "Developer: Your Name\n\n" +
+        "Industrial Troubleshooting Assistant"
+    );
 }
 </script>
 </body>
