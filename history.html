@@ -12,10 +12,17 @@
 
 <h1>📊 Search History</h1>
 
-<p>No history available.</p>
-
+<p id="historyText">No history available.</p>
 <button onclick="location.href='index.html'">🏠 Home</button>
+<button onclick="location.href='index.html'">🏠 Home</button>
+<script>
+const lastFault = localStorage.getItem("lastFault");
 
+if (lastFault) {
+    document.getElementById("historyText").innerText =
+        "Last Searched Fault: " + lastFault;
+}
+</script>
 <script src="script.js"></script>
 
 </body>
