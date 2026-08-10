@@ -106,5 +106,35 @@ const faults = {
   title: "Emergency Stop Active",
   cause: "Emergency stop button is pressed.",
   solution: "Release the emergency stop and reset the machine."
+}, 
+  "PLC_ERROR": {
+    title: "PLC Communication Error",
+    cause: "PLC communication failed.",
+    solution: "Check PLC power, Ethernet cable and communication settings."
+},
+
+"EMERGENCY_STOP": {
+    title: "Emergency Stop Activated",
+    cause: "Emergency stop button is pressed.",
+    solution: "Release the emergency stop button and reset the machine."
+},
+
+"DOOR_OPEN": {
+    title: "Safety Door Open",
+    cause: "Safety door is not closed properly.",
+    solution: "Close the safety door and check the safety switch."
+},
+
+"AIR_PRESSURE_LOW": {
+    title: "Low Air Pressure",
+    cause: "Compressed air pressure is below the required level.",
+    solution: "Check air compressor, regulator, FRL unit and air leakage."
+},
+
+"MOTOR_OVERLOAD": {
+    title: "Motor Overload",
+    cause: "Motor current exceeded the safe limit.",
+    solution: "Check motor load, wiring, overload relay and mechanical blockage."
 }
+  
 };
