@@ -77,5 +77,47 @@ const manualDB = [
     title: "BA Fault",
     cause: "Barrier process pressure abnormal.",
     solution: "Check recipe, gas pressure and controller settings."
-}
+}, 
+  ,
+{
+    keywords: ["vacuum leak", "leakage", "seal"],
+    title: "Vacuum Leakage",
+    cause: "Vacuum system leakage detected.",
+    solution: "Inspect reactor seals, bottle seal, vacuum hoses and fittings."
+},
+
+{
+    keywords: ["pump", "vacuum pump"],
+    title: "Vacuum Pump Fault",
+    cause: "Vacuum pump performance is low.",
+    solution: "Check pump oil, filters, exhaust, motor and service condition."
+},
+
+{
+    keywords: ["baratron", "pressure sensor"],
+    title: "Baratron Sensor Fault",
+    cause: "Pressure sensor reading unstable.",
+    solution: "Check Baratron gauge, wiring and sensor calibration."
+},
+
+{
+    keywords: ["gas flow", "gas"],
+    title: "Gas Flow Fault",
+    cause: "Gas flow not reaching required value.",
+    solution: "Check gas regulator, gas valve, hose and pressure."
+},
+
+{
+    keywords: ["water flow", "cooling water"],
+    title: "Cooling Water Flow Fault",
+    cause: "Cooling water flow is low.",
+    solution: "Check water pump, filter, valves and cooling line."
+},
+
+{
+    keywords: ["mouth seal"],
+    title: "Mouth Seal Leakage",
+    cause: "Bottle mouth seal damaged.",
+    solution: "Replace mouth seal and inspect seal alignment."
+}  
 ];
