@@ -77,6 +77,34 @@ const faults = {
     title: "Chiller Fault",
     cause: "Chiller alarm or low cooling capacity.",
     solution: "Check chiller alarm, water level and temperature."
-  }
+  }, 
+"VACUUM_FAULT": {
+  title: "Vacuum Fault",
+  cause: "Vacuum pressure is too low.",
+  solution: "Check vacuum pump, leakage and vacuum valve."
+},
 
+"SENSOR_FAULT": {
+  title: "Sensor Fault",
+  cause: "Sensor is not responding.",
+  solution: "Check sensor wiring and replace if necessary."
+},
+
+"GAS_PRESSURE": {
+  title: "Gas Pressure Fault",
+  cause: "Gas pressure is below the limit.",
+  solution: "Check gas cylinder, regulator and gas line."
+},
+
+"PLC_ERROR": {
+  title: "PLC Communication Error",
+  cause: "PLC communication failed.",
+  solution: "Check Ethernet cable and PLC power."
+},
+
+"EMERGENCY_STOP": {
+  title: "Emergency Stop Active",
+  cause: "Emergency stop button is pressed.",
+  solution: "Release the emergency stop and reset the machine."
+}
 };
