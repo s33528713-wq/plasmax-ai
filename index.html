@@ -19,6 +19,7 @@
     <p>🤖 AI Assistant Active</p>
     <p>📖 Manual Available</p>
 </div>
+    <p id="machineName">🏭 Machine: Not Selected</p>
     <p>Industrial Troubleshooting Assistant</p>
 
     <input type="file" id="imageInput" accept="image/*">
@@ -71,7 +72,14 @@
     <button onclick="location.href='settings.html'">⚙️ Settings</button>
 
 </div>
+<script>
+const machine = localStorage.getItem("machine");
 
+if (machine) {
+    document.getElementById("machineName").innerText =
+        "🏭 Machine: " + machine;
+}
+</script>
 <script src="faults.js"></script>
 <script src="script.js"></script>
 
