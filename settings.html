@@ -10,6 +10,7 @@
 <body>
 
 <h1>⚙️ Settings</h1>
+    <p id="selectedMachine">Selected Machine: Not Selected</p>
 
 <button onclick="alert('Theme feature coming soon')">🌙 Dark Mode</button>
 
@@ -26,6 +27,13 @@
 <button onclick="location.href='index.html'">🏠 Home</button>
 
 <script src="script.js"></script>
+<script>
+const machine = localStorage.getItem("machine");
 
+if (machine) {
+    document.getElementById("selectedMachine").innerText =
+        "Selected Machine: " + machine;
+}
+</script>
 </body>
 </html>
