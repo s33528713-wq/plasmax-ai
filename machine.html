@@ -8,21 +8,31 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <h1>🏭 Select Machine</h1>
 
-<button onclick="alert('Plasmax EVO Selected')">Plasmax EVO</button>
+<select id="machine">
+    <option>Plasmax EVO</option>
+    <option>Plasmax Old</option>
+</select>
 
 <br><br>
 
-<button onclick="alert('Plasmax Old Selected')">Plasmax Old</button>
+<button onclick="saveMachine()">💾 Save Machine</button>
 
 <br><br>
 
 <button onclick="location.href='index.html'">🏠 Home</button>
 
-<script src="script.js"></script>
+<script>
+function saveMachine() {
+    const machine = document.getElementById("machine").value;
+    localStorage.setItem("machine", machine);
+    alert("✅ Machine Saved: " + machine);
+}
+</script>
 
 </body>
 </html>
