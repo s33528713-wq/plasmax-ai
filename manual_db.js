@@ -119,5 +119,47 @@ const manualDB = [
     title: "Mouth Seal Leakage",
     cause: "Bottle mouth seal damaged.",
     solution: "Replace mouth seal and inspect seal alignment."
-}  
+}, 
+    
+{
+    keywords: ["dn40", "valve dn40"],
+    title: "DN40 Valve Fault",
+    cause: "DN40 valve not operating correctly.",
+    solution: "Check pneumatic air, solenoid coil, valve movement and wiring."
+},
+
+{
+    keywords: ["dn60", "valve dn60"],
+    title: "DN60 Valve Fault",
+    cause: "DN60 valve switching failure.",
+    solution: "Inspect air supply, valve seal, actuator and reed switch."
+},
+
+{
+    keywords: ["gas lance", "lance"],
+    title: "Gas Lance Fault",
+    cause: "Gas lance not sealing or moving correctly.",
+    solution: "Check gas lance cylinder, seal, alignment and sensor."
+},
+
+{
+    keywords: ["gripper", "bottle gripper"],
+    title: "Bottle Gripper Fault",
+    cause: "Bottle gripper not holding bottle correctly.",
+    solution: "Check gripper cylinder, air pressure and mechanical parts."
+},
+
+{
+    keywords: ["door", "safety door"],
+    title: "Safety Door Fault",
+    cause: "Safety door open or sensor fault.",
+    solution: "Close the door and inspect the safety switch and wiring."
+},
+
+{
+    keywords: ["emergency", "e-stop"],
+    title: "Emergency Stop Active",
+    cause: "Emergency stop circuit activated.",
+    solution: "Release the E-Stop button and verify the safety circuit."
+}
 ];
