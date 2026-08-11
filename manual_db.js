@@ -161,5 +161,40 @@ const manualDB = [
     title: "Emergency Stop Active",
     cause: "Emergency stop circuit activated.",
     solution: "Release the E-Stop button and verify the safety circuit."
-}
+}, 
+  
+{
+    keywords: ["vacuum chamber", "chamber leak"],
+    title: "Vacuum Chamber Leakage",
+    cause: "Vacuum chamber leakage detected.",
+    solution: "Check chamber O-ring, door seal, vacuum hose and fittings."
+},
+
+{
+    keywords: ["pressure sensor", "sensor error"],
+    title: "Pressure Sensor Fault",
+    cause: "Pressure sensor reading is unstable.",
+    solution: "Inspect sensor wiring, calibration and replace if necessary."
+},
+
+{
+    keywords: ["air cylinder", "cylinder"],
+    title: "Air Cylinder Fault",
+    cause: "Cylinder not moving correctly.",
+    solution: "Check pneumatic pressure, cylinder seal and solenoid valve."
+},
+
+{
+    keywords: ["solenoid", "solenoid valve"],
+    title: "Solenoid Valve Fault",
+    cause: "Valve not switching.",
+    solution: "Check coil voltage, wiring and valve movement."
+},
+
+{
+    keywords: ["vacuum hose", "hose leak"],
+    title: "Vacuum Hose Leakage",
+    cause: "Vacuum hose damaged or loose.",
+    solution: "Replace hose and tighten all vacuum fittings."
+}  
 ];
