@@ -1,44 +1,43 @@
 
 function askAI() {
 
-    const question = document.getElementById("question").value.trim().toUpperCase();
+    const question = document.getElementById("question").value.trim().toLowerCase();
 
-    // Search in faults.js
-    if (faults[question]) {
-
-        alert(
-            "🤖 Plasmax AI\n\n" +
-            "Fault: " + faults[question].title +
-            "\n\nCause: " + faults[question].cause +
-            "\n\nSolution: " + faults[question].solution
-        );
-
-        return;
+    // Exact search in faults.js
+    for (let key in faults) {
+        if (
+            key.toLowerCase().includes(question) ||
+            faults[key].title.toLowerCase().includes(question) ||
+            faults[key].cause.toLowerCase().includes(question) ||
+            faults[key].solution.toLowerCase().includes(question)
+        ) {
+            alert(
+                "🤖 Plasmax AI\n\n" +
+                "Fault: " + faults[key].title +
+                "\n\nCause: " + faults[key].cause +
+                "\n\nSolution: " + faults[key].solution
+            );
+            return;
+        }
     }
 
-    // Search in manual_db.js
+    // Smart search in manual_db.js
     for (let item of manualDB) {
-
         if (
-            item.title.toUpperCase().includes(question) ||
-            item.keywords.some(keyword =>
-                keyword.toUpperCase().includes(question)
-            )
+            item.title.toLowerCase().includes(question) ||
+            item.cause.toLowerCase().includes(question) ||
+            item.solution.toLowerCase().includes(question) ||
+            item.keywords.some(k => k.toLowerCase().includes(question))
         ) {
-
             alert(
                 "🤖 Plasmax AI\n\n" +
                 "Fault: " + item.title +
                 "\n\nCause: " + item.cause +
                 "\n\nSolution: " + item.solution
             );
-
             return;
         }
     }
 
-    alert(
-        "❌ No matching information found.\n\n" +
-        "Please check the fault code or update the Manual Database."
-    );
+    alert("❌ No matching fault found.");
 }
