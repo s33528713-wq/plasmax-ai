@@ -1,0 +1,6 @@
+{
+  "appId": "com.plasmax.ai",
+  "appName": "Plasmax AI",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}
