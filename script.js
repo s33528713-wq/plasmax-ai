@@ -1,5 +1,5 @@
 
-const GEMINI_API_KEY = "AQ.Ab8RN6L9dw8ElBc76guvIE3OwM44k57zwXdLNGy796ff1g68YA";
+const GEMINI_API_KEY = AQ.Ab8RN6L2MccdtETFeAUW4qioPYrSgzaOh9Oj5hxXxmkHL3ulag
 
 // ১. টেক্সট দিয়ে AI প্রশ্ন করার ফাংশন
 async function askAI() {
