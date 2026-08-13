@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -18,11 +19,14 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm install @capacitor/cli @capacitor/core @capacitor/android
+          npm install @capacitor/cli@6 @capacitor/core@6 @capacitor/android@6
 
-      - name: Capacitor Sync
+      - name: Add Android Platform
         run: |
-          npx cap add android || true
+          npx cap add android
+
+      - name: Copy Web Assets
+        run: |
           npx cap copy android
 
       - name: Build Debug APK
