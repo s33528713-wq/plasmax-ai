@@ -42,6 +42,25 @@ async function askAI() {
                 contents: [{ parts: [{ text: `You are an expert Plasmax Industrial Coating Machine engineer. Answer this query directly with Cause and Solution: ${question}` }] }]
             })
         });
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        contents: [{
+            parts: [{
+                text: `You are an expert Plasmax Industrial Coating Machine engineer. Answer this query directly with Cause and Solution: ${question}`
+            }]
+        }]
+    })
+});
+
+if (!response.ok) {
+    const errorText = await response.text();
+    alert("Gemini API Error:\n" + errorText);
+    return;
+}
+
+const data = await response.json();
 
         const data = await response.json();
         if (data.candidates && data.candidates[0].content.parts[0].text) {
