@@ -35,10 +35,8 @@ const manualDB = [
     cause: "Printer communication failure.",
     solution: "Check printer power, cable and communication."
 }, 
-    
-,
 {
-    keywords: ["gas valve", "v19xx", "valve"],
+    keywords: ["gas valve", "v19xx", "valve"]
     title: "Gas Valve V19XX Fault",
     cause: "Gas valve switching failure.",
     solution: "Check pneumatic air supply, valve coil, wiring, O-ring and reed switch."
@@ -78,7 +76,6 @@ const manualDB = [
     cause: "Barrier process pressure abnormal.",
     solution: "Check recipe, gas pressure and controller settings."
 }, 
-  ,
 {
     keywords: ["vacuum leak", "leakage", "seal"],
     title: "Vacuum Leakage",
