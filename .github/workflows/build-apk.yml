@@ -21,14 +21,22 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Prepare Web Directory
+        run: |
+          mkdir -p www
+          cp *.html www/ 2>/dev/null || true
+          cp *.css www/ 2>/dev/null || true
+          cp *.js www/ 2>/dev/null || true
+          echo '{"appId":"com.plasmax.ai","appName":"Plasmax AI","webDir":"www"}' > capacitor.config.json
+
       - name: Install Dependencies
         run: |
           npm install
-          npm install @capacitor/cli@6 @capacitor/core@6 @capacitor/android@6
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
 
-      - name: Add and Sync Android Platform
+      - name: Add and Sync Android
         run: |
-          npx cap add android || true
+          npx cap add android
           npx cap sync android
 
       - name: Build Debug APK
