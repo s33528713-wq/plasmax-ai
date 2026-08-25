@@ -1,5 +1,7 @@
 
-const GEMINI_API_KEY = "AQ.Ab8RN6LhXc93qPtXZmy35whc1uncJvP6fU7IWcCj0AQ7SbkW9A" 
+constconst WORKER_URL = "https://plasmax-ai.barmansanjib133.workers.dev";
+ ";
+ " 
 
 // ১. টেক্সট দিয়ে AI প্রশ্ন করার ফাংশন
 async function askAI() {
@@ -90,7 +92,8 @@ async function processFaultImage(event) {
         }
 
         try {
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+            const response = await fetch(WORKER_URL, {
+
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
